@@ -75,4 +75,11 @@ packer.startup(function(use)
       'kyazdani42/nvim-web-devicons',
     },
   }
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 end)
