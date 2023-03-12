@@ -20,6 +20,11 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+
+-- Move current line
+keymap.set('n', '<A-j>', ':m .+1<CR>==')
+keymap.set('n', '<A-k>', ':m .-2<CR>==')
+
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 's<left>', '<C-w>h')
@@ -43,5 +48,3 @@ keymap.set('n', '<leader>qq', ':qa!<CR>')
 
 -- Delete current buffer, and results on error if there current changes on the file not saved.
 keymap.set('n', '<leader>x', ':bd<CR>')
-
-keymap.set('n', '<leader>/', '<cmd>Commentary<CR>')
