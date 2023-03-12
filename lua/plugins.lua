@@ -76,12 +76,7 @@ packer.startup(function(use)
     },
   }
 
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
-
   use { "akinsho/toggleterm.nvim", tag = '*' }
+
+  use 'tpope/vim-commentary'
 end)
