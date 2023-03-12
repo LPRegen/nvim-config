@@ -5,6 +5,6 @@ toggleterm.setup {
   direction = 'float',
   open_mapping = [[<c-\>]],
   float_opts = {
-    border = 'single',
+    border = 'rounded',
   },
 }
