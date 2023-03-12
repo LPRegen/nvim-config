@@ -78,5 +78,7 @@ packer.startup(function(use)
 
   use { "akinsho/toggleterm.nvim", tag = '*' }
 
-  use 'tpope/vim-commentary'
+  use {
+    'tpope/vim-commentary',
+  }
 end)
