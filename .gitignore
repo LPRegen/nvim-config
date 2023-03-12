@@ -1,1 +1,8 @@
 plugin/packer_compiled.lua
+.netrwhist
+mason/
+packer.nvim.log
+rplugin.vim
+site/
+telescope.log
+telescope_history
