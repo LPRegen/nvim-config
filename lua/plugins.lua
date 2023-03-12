@@ -20,17 +20,40 @@ packer.startup(function(use)
 
   use 'nvim-tree/nvim-web-devicons'
 
-  use 'onsails/lspkind-nvim'
-  use 'L3MON4D3/LuaSnip'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/nvim-cmp'
-  use 'neovim/nvim-lspconfig'
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },         -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
+      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },             -- Required
+      { 'rafamadriz/friendly-snippets' }, -- Optional
+    }
+  }
+
+  -- use 'onsails/lspkind-nvim' -- x
+  -- use 'L3MON4D3/LuaSnip' -- x
+  -- use 'hrsh7th/cmp-buffer' -- x
+  -- use 'hrsh7th/cmp-nvim-lsp' -- x
+  -- use 'hrsh7th/nvim-cmp' -- x
+  -- use 'neovim/nvim-lspconfig' -- x
 
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  -- use 'MunifTanjim/prettier.nvim'
+  -- use 'williamboman/mason.nvim' -- x
+  -- use 'williamboman/mason-lspconfig.nvim' -- x
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -78,7 +101,5 @@ packer.startup(function(use)
 
   use { "akinsho/toggleterm.nvim", tag = '*' }
 
-  use {
-    'tpope/vim-commentary',
-  }
+  use 'numToStr/Comment.nvim'
 end)
