@@ -38,7 +38,7 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Save and quit
-keymap.set('n', '<C-s>', ':w<CR>')
+keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
 keymap.set('n', '<leader>qq', ':qa!<CR>')
 
 -- Delete current buffer, and results on error if there current changes on the file not saved.
