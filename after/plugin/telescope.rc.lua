@@ -42,7 +42,7 @@ telescope.setup {
 telescope.load_extension("file_browser")
 
 -- keymaps
-vim.keymap.set("n", "sf", function()
+vim.keymap.set("n", "<leader>e", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
