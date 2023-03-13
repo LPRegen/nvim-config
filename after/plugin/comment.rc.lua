@@ -2,18 +2,12 @@ local status, comment = pcall(require, 'Comment')
 if (not status) then return end
 
 comment.setup({
-  toggler = {
-    ---Line-comment toggle keymap
-    line = 'zqas',
-    ---Block-comment toggle keymap
-    block = 'zqa',
-  },
-  ---LHS of operator-pending mappings in NORMAL and VISUAL mode
+  -- Ignore empty lines
+  ignore = "^$",
+  -- LHS of operator-pending mappings in NORMAL and VISUAL mode
   opleader = {
     ---Line-comment keymap
     line = '<leader>/',
-    ---Block-comment keymap
-    block = 'zq',
   },
   ---Enable keybindings
   ---NOTE: If given `false` then the plugin won't create any mappings
@@ -21,4 +15,10 @@ comment.setup({
     ---Extra mapping; `gco`, `gcO`, `gcA`
     extra = false,
   },
+  pre_hook = function(...)
+    local loaded, ts_comment = pcall(require, "ts_context_commentstring.integrations.comment_nvim")
+    if loaded and ts_comment then
+      return ts_comment.create_pre_hook()(...)
+    end
+  end,
 })
