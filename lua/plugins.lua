@@ -101,5 +101,12 @@ packer.startup(function(use)
 
   use { "akinsho/toggleterm.nvim", tag = '*' }
 
-  use 'numToStr/Comment.nvim'
+  -- Comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 end)
