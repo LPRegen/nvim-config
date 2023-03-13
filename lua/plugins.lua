@@ -8,9 +8,16 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
+
+  -- Theme
+  -- use {
+  --   'svrana/neosolarized.nvim',
+  --   requires = { 'tjdevries/colorbuddy.nvim' }
+  -- }
+  use { "rebelot/kanagawa.nvim",
+    config = function()
+      vim.cmd("colorscheme kanagawa")
+    end
   }
 
   use {
@@ -59,7 +66,6 @@ packer.startup(function(use)
     end,
     requires = {
       { "nvim-tree/nvim-web-devicons" },
-      --Please make sure you install markdown and markdown_inline parser
       { "nvim-treesitter/nvim-treesitter" }
     }
   })
