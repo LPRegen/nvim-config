@@ -26,11 +26,6 @@ keymap.set('n', '<A-j>', ':m .+1<CR>==')
 keymap.set('n', '<A-k>', ':m .-2<CR>==')
 
 -- Move window
-keymap.set('n', '<Space>', '<C-w>w')
-keymap.set('', 's<left>', '<C-w>h')
-keymap.set('', 's<up>', '<C-w>k')
-keymap.set('', 's<down>', '<C-w>j')
-keymap.set('', 's<right>', '<C-w>l')
 keymap.set('', '<C-h>', '<C-w>h')
 keymap.set('', '<C-k>', '<C-w>k')
 keymap.set('', '<C-j>', '<C-w>j')
