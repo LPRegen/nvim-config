@@ -44,5 +44,3 @@ nvim_lsp.lua_ls.setup {
 
 -- Tailwind css
 nvim_lsp.tailwindcss.setup {}
--- Tailwind css
-nvim_lsp.tailwindcss.setup {}
