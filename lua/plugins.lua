@@ -56,7 +56,7 @@ packer.startup(function(use)
 
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
-  use 'norcalli/nvim-colorizer.lua'
+  -- use 'norcalli/nvim-colorizer.lua'
 
   use({
     "glepnir/lspsaga.nvim",
@@ -93,8 +93,6 @@ packer.startup(function(use)
     config = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
-      require("which-key").setup {
-      }
     end
   }
 end)
