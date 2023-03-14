@@ -23,9 +23,19 @@ cmp.setup({
     { name = 'buffer' },
   }),
   formatting = {
-    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+    format = lspkind.cmp_format({ with_text = true, maxwidth = 50 })
   }
 })
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_servers = { 'cssls', 'tailwindcss', 'luau_lsp', 'tsserver', 'html' }
+
+for _, server in pairs(lsp_servers)
+do
+  require('lspconfig')[server].setup {
+    capabilities = capabilities
+  }
+end
 
 vim.cmd [[
   set completeopt=menuone,noinsert,noselect
