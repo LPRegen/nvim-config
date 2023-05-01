@@ -40,3 +40,9 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsea
 
 -- Search word under cursor
 map({ "n", "x" }, "gw", "*N", { desc = "Search word under cursor" })
+
+-- Delete backwards
+map("n", "dw", 'vb"_d', { nowait = true, silent = true, desc = "Delete backwards" })
+
+-- Select all
+map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
