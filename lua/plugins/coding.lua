@@ -95,7 +95,7 @@ return {
 		opts = {
 			mappings = {
 				comment = "<leader>/",
-				comment_line = "",
+				comment_line = "<leader>/",
 				textobject = "",
 			},
 			hooks = {
@@ -107,7 +107,6 @@ return {
 		config = function(_, opts)
 			require("mini.comment").setup(opts)
 		end,
-		keys = {},
 	},
 
 	{
@@ -178,5 +177,26 @@ return {
 				})
 			end
 		end,
+	},
+
+	-- terminal
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		event = "InsertEnter",
+		opts = {
+			direction = "float",
+			float_opts = {
+				border = "curved",
+			},
+		},
+		cmd = "ToggleTerm",
+		keys = {
+			{
+				"<C-\\>",
+				"<cmd>ToggleTerm<cr>",
+				desc = "Toggle terminal",
+			},
+		},
 	},
 }
