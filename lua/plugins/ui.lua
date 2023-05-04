@@ -168,4 +168,14 @@ return {
 
 	-- ui components
 	{ "MunifTanjim/nui.nvim", lazy = true },
+
+	-- Neo scroll
+	{
+		"karb94/neoscroll.nvim",
+		-- lazy = "VeryLazy",
+		config = function()
+			require("neoscroll").setup()
+		end,
+		event = "BufRead",
+	},
 }
