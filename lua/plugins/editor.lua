@@ -45,8 +45,15 @@ return {
 			plugins = { spelling = true },
 			defaults = {
 				mode = { "n", "v" },
-				["<leader>g"] = { name = "+git" },
-				["<leader>d"] = { name = "+dap" },
+				["<leader>g"] = { name = "+ git" },
+				["<leader><tab>"] = { name = "+ tabs" },
+				["<leader>d"] = { name = "+ dap" },
+				["<leader>c"] = { name = "+ code" },
+				["<leader>b"] = { name = "+ buffer" },
+				["<leader>f"] = { name = "+ find" },
+				["<leader>q"] = { name = "+ session" },
+				["<leader>x"] = { name = "+ trouble" },
+				["<leader>s"] = { name = "+ todo" },
 			},
 		},
 
@@ -135,12 +142,12 @@ return {
     -- stylua: ignore
     keys = {
       {
-        "<leader>bx",
+        "<leader>bd",
         function() require("mini.bufremove").delete(0, false) end,
         { desc = "Delete Buffer" },
       },
       {
-          "<leader>bX",
+          "<leader>bD",
           function() require("mini.bufremove").delete(0, true) end,
           { desc = "Delete Buffer (Force)"}
         },
