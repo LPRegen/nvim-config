@@ -25,6 +25,9 @@ return {
 					end
 				end,
 			},
+			{
+				"windwp/nvim-ts-autotag",
+			},
 		},
 		keys = {
 			{ "<c-space>", desc = "Increment selection" },
@@ -59,6 +62,9 @@ return {
 					scope_incremental = false,
 					node_decremental = "<bs>",
 				},
+			},
+			autotag = {
+				enable = true,
 			},
 		},
 		---@param opts TSConfig
