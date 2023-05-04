@@ -17,6 +17,7 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 		{ import = "plugins.extras.lang.typescript" },
+		{ import = "plugins.extras.lang.markdown" },
 	},
 	defaults = {
 		lazy = true,
