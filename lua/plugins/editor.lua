@@ -232,5 +232,8 @@ return {
 		end,
 		lazy = "VeryLazy",
 		event = "BufRead",
+		keys = {
+			{ "<leader>sw", "<cmd>HopWord<cr>", desc = "Search word HOP" },
+		},
 	},
 }
