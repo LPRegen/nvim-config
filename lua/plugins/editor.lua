@@ -219,8 +219,18 @@ return {
 	{
 		"nvim-pack/nvim-spectre",
   -- stylua: ignore
-  keys = {
-    { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
-  },
+    keys = {
+     { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+    },
+	},
+
+	-- motion
+	{
+		"phaazon/hop.nvim",
+		config = function()
+			require("hop").setup()
+		end,
+		lazy = "VeryLazy",
+		event = "BufRead",
 	},
 }
