@@ -14,6 +14,9 @@ end
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
+-- close window
+map("n", "<leader>qw", "<cmd>q<cr>", { desc = "Close window" })
+
 -- save file
 map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
