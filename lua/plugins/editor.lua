@@ -233,7 +233,9 @@ return {
 		lazy = "VeryLazy",
 		event = "BufRead",
 		keys = {
-			{ "<leader>sw", "<cmd>HopWord<cr>", desc = "Search word HOP" },
+			{ "<leader>hw", "<cmd>HopWord<cr>", desc = "Search word" },
+			{ "<leader>hl", "<cmd>HopLineStart<cr>", desc = "Go to line start" },
+			{ "<leader>hc", "<cmd>HopChar2<cr>", desc = "Go to characters" },
 		},
 	},
 }
