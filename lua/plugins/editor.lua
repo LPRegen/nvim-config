@@ -22,7 +22,7 @@ return {
 			{
 				"<leader>e",
 				"<cmd>Neotree toggle<CR>",
-				"Open Neotree",
+				desc = "Open Neotree",
 			},
 		},
 	},
@@ -53,6 +53,8 @@ return {
 				["<leader>f"] = { name = "+ find" },
 				["<leader>q"] = { name = "+ session" },
 				["<leader>x"] = { name = "+ trouble" },
+				["<leader>l"] = { name = "+ lazy" },
+				["<leader>h"] = { name = "+ hop" },
 				["<leader>s"] = { name = "+ todo" },
 			},
 		},
