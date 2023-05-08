@@ -11,6 +11,10 @@ local function map(mode, lhs, rhs, opts)
 	end
 end
 
+-- lazy
+map("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Launch Lazy" })
+map("n", "<leader>ls", "<cmd>Lazy sync<cr>", { desc = "Lazy sync" })
+
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
