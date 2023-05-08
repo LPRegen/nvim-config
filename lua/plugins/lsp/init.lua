@@ -195,13 +195,13 @@ return {
 						filetypes = {
 							"javascript",
 							"javascriptreact",
-							"json",
 							"jsonc",
 							"markdown",
 							"typescript",
 							"typescriptreact",
 						},
 					}),
+					nls.builtins.formatting.fixjson,
 				},
 			}
 		end,
