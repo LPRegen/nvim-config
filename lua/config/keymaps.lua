@@ -27,7 +27,7 @@ map("n", "<leader>qw", "<cmd>q<cr>", { desc = "Close window" })
 -- save file
 map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
-map({ "v", "n" }, ";", ":", { nowait = true, desc = "Command mode" })
+map({ "v", "n" }, ";", ":", { silent = false, desc = "Command mode" })
 
 -- better up/down
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
