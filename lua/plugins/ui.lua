@@ -66,7 +66,7 @@ return {
 					disabled_filetypes = { statusline = { "dashboard", "alpha" } },
 				},
 				sections = {
-					lualine_a = { "mode" },
+					lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 					lualine_b = { "branch" },
 					lualine_c = {
 						{
@@ -115,13 +115,13 @@ return {
 					},
 					lualine_y = {
 						{ "progress", separator = " ", padding = { left = 1, right = 0 } },
-						{ "location", padding = { left = 0, right = 1 } },
+						{ "location", padding = { left = 0, right = 1 }, separator = { right = "" } },
 					},
-					-- lualine_z = {
-					-- function()
-					-- 	return " " .. os.date("%R")
-					-- end,
-					-- },
+					lualine_z = {
+						-- function()
+						-- 	return " " .. os.date("%R")
+						-- end,
+					},
 				},
 				extensions = { "neo-tree", "lazy" },
 			}
