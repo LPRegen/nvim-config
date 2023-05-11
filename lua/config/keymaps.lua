@@ -63,8 +63,12 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 if Util.has("bufferline.nvim") then
 	map("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 	map("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
-	map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
-	map("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+
+	map("n", "<S-tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+	map("n", "<tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+
+	-- map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+	-- map("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 else
 	map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 	map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
