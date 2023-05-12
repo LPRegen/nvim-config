@@ -16,7 +16,7 @@ map("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Launch Lazy" })
 map("n", "<leader>ls", "<cmd>Lazy sync<cr>", { desc = "Lazy sync" })
 
 -- LSP
-map("n", "<leader>cR", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
+map("n", "<leader>ce", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
 
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
