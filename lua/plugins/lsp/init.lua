@@ -178,29 +178,30 @@ return {
 					nls.builtins.formatting.fish_indent,
 					nls.builtins.diagnostics.fish,
 					nls.builtins.formatting.stylua,
-					nls.builtins.formatting.prettierd.with({
-						filetypes = {
-							"html",
-							"markdown",
-							"css",
-							"scss",
-							"less",
-							"yaml",
-							"markdown.mdx",
-							"graphql",
-							"handlebars",
-						},
-					}),
-					nls.builtins.formatting.deno_fmt.with({
-						filetypes = {
-							"javascript",
-							"javascriptreact",
-							"jsonc",
-							"markdown",
-							"typescript",
-							"typescriptreact",
-						},
-					}),
+					nls.builtins.formatting.prettierd,
+					-- .with({
+					-- filetypes = {
+					-- "html",
+					-- "markdown",
+					-- "css",
+					-- "scss",
+					-- "less",
+					-- "yaml",
+					-- "markdown.mdx",
+					-- "graphql",
+					-- "handlebars",
+					-- },
+					-- }),
+					-- nls.builtins.formatting.deno_fmt.with({
+					-- 	filetypes = {
+					-- 		"javascript",
+					-- 		"javascriptreact",
+					-- 		"jsonc",
+					-- 		"markdown",
+					-- 		"typescript",
+					-- 		"typescriptreact",
+					-- 	},
+					-- }),
 					nls.builtins.formatting.fixjson,
 				},
 			}
