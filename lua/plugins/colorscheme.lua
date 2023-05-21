@@ -1,27 +1,30 @@
 return {
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
-	-- 	priority = 1000, -- make sure to load this before all the other start plugins
-	-- 	config = function()
-	-- 		require("catppuccin").setup({
-	-- 			flavour = "macchiato",
-	-- 		})
-	-- 		vim.cmd([[colorscheme catppuccin]])
-	-- 	end,
-	-- },
 	{
-		"projekt0n/github-nvim-theme",
-		name = "github-theme",
-		lazy = false,
-		priority = 1000,
+		"catppuccin/nvim",
+		name = "catppuccin",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-			require("github-theme").setup({
-				-- ...
+			require("catppuccin").setup({
+				flavour = "macchiato",
+				transparent_background = true,
 			})
-
-			vim.cmd("colorscheme github_dark_dimmed")
+			vim.cmd([[colorscheme catppuccin]])
 		end,
 	},
+	-- {
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	name = "github-theme",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("github-theme").setup({})
+	-- 		vim.cmd("colorscheme github_dark_dimmed")
+	-- 	end,
+	-- 	opts = {
+	-- 		options = {
+	-- 			transparent = true,
+	-- 		},
+	-- 	},
+	-- },
 }
