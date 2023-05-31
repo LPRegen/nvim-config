@@ -18,6 +18,7 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.extras.lang.typescript" },
 		{ import = "plugins.extras.lang.markdown" },
+		{ import = "plugins.extras.notes.neorg" },
 	},
 	defaults = {
 		lazy = true,

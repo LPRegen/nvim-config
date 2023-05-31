@@ -68,6 +68,7 @@ return {
 					{ name = "luasnip" },
 					{ name = "buffer" },
 					{ name = "path" },
+					{ name = "neorg" },
 				}),
 				formatting = {
 					format = function(_, item)
