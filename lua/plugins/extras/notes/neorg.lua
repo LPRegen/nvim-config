@@ -24,4 +24,8 @@ return {
 			},
 		})
 	end,
+	keys = {
+		{ "<leader>Ni", "<cmd>Neorg index<cr>", desc = "Index" },
+		{ "<leader>Nt", "<cmd>Neorg journal today<cr>", desc = "Today's journal" },
+	},
 }
