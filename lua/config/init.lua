@@ -9,7 +9,7 @@ local defaults = {
 
 	---@type string|fun()
 	colorscheme = function()
-		require("tokyonight").load()
+		require("kanagawa").load()
 	end,
 	-- load the default settings
 	defaults = {
