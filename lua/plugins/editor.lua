@@ -78,7 +78,7 @@ return {
 				["<leader>l"] = { name = "+ lazy" },
 				["<leader>h"] = { name = "+ hop" },
 				["<leader>s"] = { name = "+ todo" },
-				["<leader>N"] = { name = "+ neorg" },
+				["<leader>n"] = { name = "+ neorg" },
 			},
 		},
 
