@@ -33,3 +33,6 @@ map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- terminal
 map("t", "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
+
+-- save file
+map({ "v", "n", "s" }, "<leader>a", "<cmd>w<cr><esc>", { desc = "Save file" })
