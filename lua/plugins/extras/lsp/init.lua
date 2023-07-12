@@ -6,7 +6,7 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-        -- By adding the server, will be automatically installed by Mason.
+        -- By adding the server name, it will be automatically installed by Mason.
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
         -- Python
@@ -26,6 +26,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "stylua",
         "prettierd",
       },
     },
