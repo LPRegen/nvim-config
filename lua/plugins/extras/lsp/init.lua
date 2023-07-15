@@ -29,8 +29,12 @@ return {
       return {
         root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
         sources = {
-          nls.builtins.diagnostics.mypy,
-          nls.builtins.diagnostics.ruff,
+          nls.builtins.diagnostics.mypy.with({
+            extra_args = function()
+              local virtual = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_DEFAULT_ENV") or "/usr"
+              return { "--python-executable", virtual .. "/bin/python3" }
+            end,
+          }), nls.builtins.diagnostics.ruff,
           nls.builtins.formatting.black,
         },
       }
