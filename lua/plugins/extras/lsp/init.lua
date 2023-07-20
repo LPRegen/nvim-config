@@ -22,6 +22,8 @@ return {
   },
 
   -- Formatters
+  -- Builtins
+  -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
   {
     "jose-elias-alvarez/null-ls.nvim",
     opts = function()
@@ -29,6 +31,7 @@ return {
       return {
         root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
         sources = {
+
           -- Python
           nls.builtins.diagnostics.mypy.with({
             extra_args = function()
@@ -41,6 +44,9 @@ return {
 
           -- TS / JSX
           nls.builtins.formatting.prettierd,
+
+          -- Lua
+          nls.builtins.formatting.stylua,
         },
       }
     end,
@@ -60,7 +66,7 @@ return {
         -- Py
         "mypy",
         "ruff",
-        "black"
+        "black",
       },
     },
   },
