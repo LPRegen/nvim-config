@@ -25,7 +25,7 @@ return {
           ["<Tab>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
-          }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          }), -- Accept currently selected item. ret `select` to `false` to only confirm explicitly selected items.
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
@@ -51,4 +51,22 @@ return {
       }
     end,
   },
+
+  -- Surroundings
+  {
+    {
+      "echasnovski/mini.surround",
+      opts = {
+        mappings = {
+          add = "gsa",
+          delete = "gsd",
+          find = "gsf",
+          find_left = "gsF",
+          highlight = "gsh",
+          replace = "gsr",
+          update_n_lines = "gsn",
+        },
+      },
+    }
+  }
 }
