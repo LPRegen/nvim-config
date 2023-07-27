@@ -1,4 +1,5 @@
 return {
+  -- https://github.com/nvim-neorg/neorg/wiki
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
   dependencies = { "nvim-lua/plenary.nvim" },
@@ -6,7 +7,7 @@ return {
   config = function()
     require("neorg").setup({
       load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.defaults"] = {}, -- Loads default modules
         ["core.concealer"] = {
           config = {
             folds = false,
@@ -34,6 +35,12 @@ return {
               notes = "~/dev/personalNotes/Neorg",
             },
             default_workspace = "notes",
+          },
+        },
+        ["core.integrations.treesitter"] = {},
+        ["core.export"] = {
+          config = {
+            export_dir = "~/dev/mdExported",
           },
         },
       },
