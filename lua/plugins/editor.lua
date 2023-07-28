@@ -32,8 +32,8 @@ return {
         position = "right",
         mappings = {
           ["<space>"] = "none",
-          ["h"] = "close_node",
-          ["l"] = "open",
+          ["n"] = "close_node",
+          ["o"] = "open",
         },
       },
       default_component_configs = {
@@ -55,7 +55,7 @@ return {
     },
     keys = {
       {
-        "<leader>e",
+        "<leader>n",
         "<cmd>Neotree toggle<CR>",
         desc = "Open Neotree",
       },
