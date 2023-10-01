@@ -1,12 +1,5 @@
 return {
   {
-    "L3MON4D3/LuaSnip",
-    keys = function()
-      return {}
-    end,
-  },
-
-  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
@@ -48,23 +41,5 @@ return {
         end, { "i", "s" }),
       })
     end,
-  },
-
-  -- Surroundings
-  {
-    {
-      "echasnovski/mini.surround",
-      opts = {
-        mappings = {
-          add = "gsa",
-          delete = "gsd",
-          find = "gsf",
-          find_left = "gsF",
-          highlight = "gsh",
-          replace = "gsr",
-          update_n_lines = "gsn",
-        },
-      },
-    },
   },
 }
