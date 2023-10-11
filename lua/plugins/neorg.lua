@@ -2,7 +2,7 @@ return {
   -- https://github.com/nvim-neorg/neorg/wiki
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = { { "nvim-lua/plenary.nvim" }, { "nvim-neorg/neorg-telescope" } },
   cmd = "Neorg",
   config = function()
     require("neorg").setup({
@@ -32,17 +32,18 @@ return {
         ["core.dirman"] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
-              notes = "~/dev/personalNotes/new-neorg",
+              notes = "~/dev/zk/",
             },
             default_workspace = "notes",
           },
         },
-        ["core.integrations.treesitter"] = {},
         ["core.export"] = {
           config = {
             export_dir = "~/dev/mdExported",
           },
         },
+        ["core.integrations.treesitter"] = {},
+        ["core.integrations.telescope"] = {},
       },
     })
   end,
@@ -51,5 +52,6 @@ return {
     { "<leader>nt", "<cmd>Neorg journal today<cr>", desc = "Today's journal" },
     { "<leader>nT", "<cmd>Neorg journal tomorrow<cr>", desc = "Tomorrow's journal" },
     { "<leader>ny", "<cmd>Neorg journal yesterday<cr>", desc = "Yesterday's journal" },
+    { "<leader>nl", "<cmd>Telescope neorg insert_file_link<cr>", desc = "Insert link to file" },
   },
 }
