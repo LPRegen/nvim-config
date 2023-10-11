@@ -50,6 +50,7 @@ return {
   end,
   keys = {
     { "<leader>ni", "<cmd>Neorg index<cr>", desc = "Index" },
+    { "<leader>nw", "<cmd>Neorg workspace<cr>", desc = "Index" },
     { "<leader>nt", "<cmd>Neorg journal today<cr>", desc = "Today's journal" },
     { "<leader>nT", "<cmd>Neorg journal tomorrow<cr>", desc = "Tomorrow's journal" },
     { "<leader>ny", "<cmd>Neorg journal yesterday<cr>", desc = "Yesterday's journal" },
