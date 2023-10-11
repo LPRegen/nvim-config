@@ -54,5 +54,6 @@ return {
     { "<leader>nT", "<cmd>Neorg journal tomorrow<cr>", desc = "Tomorrow's journal" },
     { "<leader>ny", "<cmd>Neorg journal yesterday<cr>", desc = "Yesterday's journal" },
     { "<leader>nl", "<cmd>Telescope neorg insert_file_link<cr>", desc = "Insert link to file" },
+    { "<leader>ns", "<cmd>Telescope neorg find_norg_files<cr>", desc = "Search files" },
   },
 }
