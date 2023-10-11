@@ -7,13 +7,22 @@ return {
     return {
       root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
       sources = {
+
+        -- NOTE: sources
+        -- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md
+
+        -- Fish
         nls.builtins.formatting.fish_indent,
         nls.builtins.diagnostics.fish,
+
+        -- Lua
         nls.builtins.formatting.stylua,
         nls.builtins.formatting.shfmt,
-        -- nls.builtins.diagnostics.flake8,
 
         nls.builtins.formatting.prettierd,
+
+        -- Django
+        nls.builtins.formatting.djlint,
       },
     }
   end,
