@@ -30,6 +30,3 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 
 -- save file
 map({ "v", "n", "s" }, "<leader>a", "<cmd>w<cr><esc>", { desc = "Save file" })
-
--- terminal
-map("t", "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })

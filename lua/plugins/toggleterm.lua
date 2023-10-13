@@ -6,6 +6,7 @@ return {
     float_opts = {
       border = "curved",
     },
+    open_mapping = [[<c-\>]],
   },
   cmd = "ToggleTerm",
   keys = {
