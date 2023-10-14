@@ -1,5 +1,6 @@
 return {
   {
+    -- NOTE: https://github.com/akinsho/bufferline.nvim
     "akinsho/bufferline.nvim",
     opts = {
       options = {
@@ -25,6 +26,9 @@ return {
           },
         },
       },
+    },
+    keys = {
+      { "<leader>bg", "<cmd>BufferLineGroupToggle Ng<cr>", desc = "Index" },
     },
   },
 }
