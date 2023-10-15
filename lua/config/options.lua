@@ -49,9 +49,7 @@ opt.winminwidth = 5 -- Minimum window width
 opt.wrap = true -- Disable line wrap
 opt.linebreak = true
 opt.scrolloff = 7
-
--- disable nvim intro
-opt.shortmess:append("sI")
+opt.shortmess:append("sI") -- disable nvim intro
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
