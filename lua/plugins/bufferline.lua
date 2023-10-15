@@ -10,7 +10,7 @@ return {
           },
           items = {
             {
-              name = "Ng",
+              name = " ",
               highlight = { undercurl = false, sp = "orange" },
               auto_close = false,
               matcher = function(buf)
@@ -25,10 +25,21 @@ return {
             },
           },
         },
+
+        -- Disable buffer icons
+        -- show_buffer_icons = true,
+        -- Removes file extension if present, otherwise returns filename
+        name_formatter = function(buf)
+          if buf.name:find("%.") then
+            return buf.name:match("(.+)%..+$")
+          else
+            return buf.name
+          end
+        end,
       },
     },
     keys = {
-      { "<leader>bg", "<cmd>BufferLineGroupToggle Ng<cr>", desc = "Index" },
+      { "<leader>bg", "<cmd>BufferLineGroupToggle _<cr>", desc = "Index" },
     },
   },
 }
