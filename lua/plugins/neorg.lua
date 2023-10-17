@@ -12,7 +12,7 @@ return {
         ["core.defaults"] = {}, -- Loads default modules
         ["core.concealer"] = {
           config = {
-            folds = false,
+            folds = true,
             icon_preset = "diamond",
             icons = {
               todo = {
