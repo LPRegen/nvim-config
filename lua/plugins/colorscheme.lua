@@ -2,13 +2,13 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin-mocha",
     },
   },
 
   {
     "folke/tokyonight.nvim",
-    enabled = true,
+    enabled = false,
     config = function()
       require("tokyonight").setup({
         style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -29,7 +29,7 @@ return {
   {
     "catppuccin/nvim",
     lazy = false,
-    enabled = false,
+    enabled = true,
     name = "catppuccin",
     opts = {
       flavour = "macchiato",
