@@ -45,6 +45,12 @@ return {
             export_dir = "~/dev/mdExported",
           },
         },
+        ["core.esupports.metagen"] = {
+          config = {
+            tab = "  ",
+            type = "auto",
+          },
+        },
         ["core.integrations.treesitter"] = {},
         ["core.integrations.telescope"] = {},
       },
