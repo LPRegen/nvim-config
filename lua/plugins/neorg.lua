@@ -1,6 +1,6 @@
 return {
   -- NOTE: https://github.com/nvim-neorg/neorg
-  -- https://github.com/nvim-neorg/neorg/wiki
+  -- WIKI https://github.com/nvim-neorg/neorg/wiki
 
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
