@@ -1,5 +1,6 @@
 return {
   {
+    -- INFO: https://github.com/folke/todo-comments.nvim
     "folke/todo-comments.nvim",
     opts = {
       keywords = {
