@@ -35,9 +35,10 @@ return {
         ["core.dirman"] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
-              notes = "~/dev/zk/",
+              dev = "~/dev/zk/",
+              personal = "~/dev/personal",
             },
-            default_workspace = "notes",
+            default_workspace = "dev",
           },
         },
         ["core.export"] = {
