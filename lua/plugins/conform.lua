@@ -24,7 +24,7 @@ return {
         ["handlebars"] = { { "prettierd", "prettier" } },
         tailwindcss = { "rustywind" },
         python = { "black" },
-        htmldjango = { "djlint" },
+        htmldjango = { "djlint", "curlylint" },
       },
     },
   },
